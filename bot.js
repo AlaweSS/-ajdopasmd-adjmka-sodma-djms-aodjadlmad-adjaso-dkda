@@ -57,4 +57,4 @@ return;
 
 
 
-client.login('NDkxOTU0NDc2OTk1ODM3OTcz.DoPYNg.b-ubfLaOTDHDdhHHCcutU7fUqD4')
+client.login(process.env.BOT_TOKEN)
