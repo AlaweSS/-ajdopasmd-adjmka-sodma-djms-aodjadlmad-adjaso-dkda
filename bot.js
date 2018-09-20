@@ -85,7 +85,7 @@ ali.send(`:warning: You Are Has Been Warned !  by: ${message.author.tag} :warnin
 
 
 const fs = require('fs')
-let ar = JSON.parse(fs.readFileSync(`./Data/AutoRole.json`, `utf8`))
+let ar = JSON.parse(fs.readFileSync(`./AutoRole.json`, `utf8`))
 
 
 client.on('guildMemberAdd', member => {
