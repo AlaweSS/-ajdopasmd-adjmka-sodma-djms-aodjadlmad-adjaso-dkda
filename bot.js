@@ -126,6 +126,6 @@ if(message.content.startsWith(prefix + `autorole`)) {
    }
          }
 
-
+        })
 
 client.login(process.env.BOT_TOKEN)
