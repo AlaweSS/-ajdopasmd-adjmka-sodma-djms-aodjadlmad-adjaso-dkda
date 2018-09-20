@@ -78,7 +78,8 @@ let embed = new Discord.RichEmbed()
 let incidentchannel = message.guild.channels.find(`name`, "log");
 if(!incidentchannel) return message.channel.send("Can't find log channel.");
 incidentchannel.send(embed);
-
+  message.channel.send(`**:warning: ${ali} has been warned :warning:**`)
+ali.send(`:warning: You Are Has Been Warned !  by: ${message.author.tag} :warning: `)
 
 }})
 
