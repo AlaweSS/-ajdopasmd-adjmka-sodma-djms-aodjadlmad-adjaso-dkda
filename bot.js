@@ -62,7 +62,7 @@ client.on('message', message => {
 
 client.on('message', message => {
 let ali = message.mentions.users.first()
-let  reason  =  message.content.split('  ').slice(2).join('  ');
+    let wReason = message.content.split(" ").slice(2).join(" ");
 if(message.content.startsWith(prefix + 'warn')) {
 if(!ali) return message.reply('mention someone')
 if(!reason) return message.reply('Type The Reason')
