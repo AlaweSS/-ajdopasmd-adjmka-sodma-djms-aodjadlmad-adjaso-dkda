@@ -60,7 +60,27 @@ client.on('message', message => {
     })
 
 
+client.on('message', message => {
+let ali = message.mentions.users.first()
+let  reason  =  message.content.split('  ').slice(2).join('  ');
+if(message.content.startsWith(prefix + 'warn')) {
+if(!ali) return message.reply('mention someone')
+if(!reason) return message.reply('Type The Reason')
+if(!message.guild.member(message.author).hasPermission("MUTE_MEMBERS")) return message.channel.send("- ما معك برمشن");
+let embed = new Discord.RichEmbed()
+.setTitle('**New Warned User**')
+.addField('Warned By :', `${message.author.tag} with id ${message.author.id}`)
+.addField('Warned User:', `${ali} with id ${ali.id}`)
+.addField('Reason:',`${reason}`)
+.addField('Warned In', `${message.channel.name}`)
+.addField('Time',`${message.createdAt}`)
+.setFooter('Critele')
+let incidentchannel = message.guild.channels.find(`name`, "log");
+if(!incidentchannel) return message.channel.send("Can't find log channel.");
+incidentchannel.send(embed);
 
+
+}})
 
 
 client.login(process.env.BOT_TOKEN)
