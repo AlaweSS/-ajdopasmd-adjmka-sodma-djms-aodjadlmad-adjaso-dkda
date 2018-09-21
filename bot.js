@@ -86,3 +86,136 @@ ali.send(`:warning: You Are Has Been Warned !  by: ${message.author.tag} :warnin
 
 
 client.login(process.env.BOT_TOKEN)
+
+
+  client.on('message', message => {
+
+    if (message.author.id === client.user.id) return;
+
+            if (message.content.startsWith(prefix + "ping")) {
+
+        message.channel.sendMessage(':ping_pong: Pong! In `' + `${client.ping}` + ' ms`');
+
+    }
+
+});
+
+
+
+
+
+
+
+client.on('message', message => {
+
+if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send The Help In DMS // Code By NotGucci
+
+    let pages = [`
+
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
+
+:earth_africa: The Public Commands :earth_africa:
+
+1༺༻  $id  | Shows User ID [SOON]༺༻
+
+2༺༻  $userinfo | Shows User Info༺༻
+
+3༺༻  $server | Shows Server Info༺༻
+
+4༺༻  $ping | Shows Bot Ping༺༻
+
+5༺༻  $dt| Show date and time༺༻
+
+6༺༻   $invite | Shows Bot Invite Link༺༻
+
+7༺༻   $bot | Shows Bot Info༺༻
+
+8༺༻   $avatar | Shows User Avatar༺༻
+
+9༺༻   $image | Shows Server Avatar༺༻
+
+10༺༻  $mcskin  | Shows Minecraft Players Skin༺༻
+
+11༺༻  $say  | Repeat What Your Saying༺༻
+
+12༺༻  $gif  | Gives You Gif ༺༻
+
+11༺༻  $moveall  | Move All Members To Your Channel༺༻
+
+12༺༻  $hack  | Hack Game༺༻
+
+13༺༻  $rps  | Paper scissors game with the bot༺༻
+
+14༺༻  $مريم  | Mariam Game༺༻
+
+15༺༻  $حاسبه |  Calculator༺༻
+
+16༺༻  $translate |  Translate༺༻
+
+17༺༻  $انمي |  Anime Game༺༻
+
+18༺༻  $حكم |  Rule Game༺༻
+
+19༺༻  $عقاب |  Punishment Game༺༻
+
+20༺༻  $tag  | Give You Custom Words༺༻
+
+21༺༻  $short  | short link༺༻
+
+22༺༻  $micr  | Questions for Minecraft༺༻
+
+23༺༻  $allbots  | View all bots༺༻
+
+24༺༻  $animal  | Random Animal༺༻
+
+25༺༻  $punch  | punch someone༺༻
+
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
+
+Click On ▶ To Go Administor Side
+
+   `
+
+,`
+
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
+
+:closed_lock_with_key: Administor Commands:closed_lock_with_key:
+
+1༺༻  $clear | Clear The Chat(without number)༺༻
+
+1༺༻  $nclear | Clear The Chat (with number)༺༻
+
+2༺༻  $bc1 | Msg Everyone In The Server༺༻
+
+2༺༻  $bc2 | Msg Everyone In The Server [without embed]༺༻
+
+3༺༻  $kick | Kick With Reson༺༻
+
+4༺༻  $tempban | Ban With Reason༺༻
+
+5༺༻  $tempmute | mute With Reason༺༻
+
+6༺༻  $unmute | unmute ༺༻
+
+7༺༻ Make Room Called log For Logs༺༻
+
+8༺༻ Make Room Called report For reports༺༻
+
+9༺༻ Make Room Called suggestion For suggestion༺༻
+
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
+
+Click On ▶ To Go To Bot Info
+
+   `,`
+
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
+
+1༺༻  There is Commands Just For OrochiX | Bot By:OrochiX༺༻
+
+$bcall -> send msg for all servers
+
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
+
+   `]
