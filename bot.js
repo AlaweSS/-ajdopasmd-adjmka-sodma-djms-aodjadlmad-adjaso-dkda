@@ -189,3 +189,78 @@ ali.send(`:warning: You Are Has Been Warned !  by: ${message.author.tag} :warnin
 
 
 client.login(process.env.BOT_TOKEN)
+client.on('message', async message => {
+    let time = moment().format('Do MMMM YYYY , hh:mm');
+    let wUser = message.mentions.members.first();
+    let wReason = message.content.split(" ").slice(2).join(" ");
+    let wMute = message.guild.roles.find(r => r.name === "Chat-Muted");
+    let adv = require('./mutes.json').state;
+    let action = require('./warns.json').state;
+    let messageArray = message.content.split(" ");
+
+   if(message.content.startsWith(prefix + "warn")) {
+                       let staff = message.guild.member(message.author).roles.find('name' , 'Warns');
+                                if(!staff) return message.reply('**- You Dont have Warns Rank**');
+       if(!wUser) return message.channel.send("**- اكتب منشن يلي تبي تعطيه وارن**");
+       if(!wReason) return message.channel.send('**- اكتب السبب**');
+
+
+
+
+       message.channel.send(`**- Done!, I warned: ${wUser}**`);
+
+
+
+
+
+       then(() => {
+    client.warns = {
+    guild: message.guild.name,
+    guildId: message.guild.id,
+    user: wUser.username,
+    userId: wUser.id,
+    time: time
+    };
+        fs.writeFile("./warns.json", JSON.stringify(client.warns, null, 4),err => {
+        if(err) throw err;
+        });
+     });
+   }
+});
+
+
+
+
+
+
+
+
+const Eris = require("eris");
+var eris= "428963055553216512";
+var eris = new Eris("bot tokn here");
+
+eris.on("ready", ready => {
+setInterval(function(){
+
+            var currentTime = new Date(),
+            hours = currentTime.getHours() + 0 ,
+            minutes = currentTime.getMinutes(),
+            seconds = currentTime.getSeconds(),
+            years = currentTime.getFullYear(),
+            month = currentTime.getMonth() + 1,
+            day = currentTime.getDate(),
+            week = currentTime.getDay();
+
+
+
+            if (minutes < 10) {
+                minutes = "0" + minutes;
+            }
+            var suffix = "AM";
+            if (hours >= 12) {
+                suffix = "PM";
+                hours = hours - 12;
+            }
+            if (hours == 0) {
+                hours = 12;
+            }
